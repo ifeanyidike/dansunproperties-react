@@ -1,0 +1,14 @@
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.modal__content{
+    background-color: #fff;
+    border: none !important;
+    outline: none !important;
+    width: 80vw;
+    height: 100vh;
+}

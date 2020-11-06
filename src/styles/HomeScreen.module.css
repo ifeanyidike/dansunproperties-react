@@ -1,0 +1,267 @@
+a {
+  text-decoration: none;
+}
+
+.home__mainImage {
+  height: 80vh;
+  background-image: url("../images/pexels-alex-1732414.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.404);
+  background-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__text {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 25px;
+}
+
+.home__text h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.home__text p {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.home__search {
+  display: flex;
+  background-color: white;
+  width: 50%;
+  height: 60px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.home__searchInput {
+  height: 100%;
+  flex: 0.97;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding-left: 15px;
+}
+
+.home__search > .MuiSvgIcon-root {
+  flex: 0.03;
+  color: var(--brand-hue);
+}
+
+.home__listings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home__listingText {
+  max-width: 480px;
+  align-self: center;
+}
+
+.home__listingText > h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.home__listingsCards {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 70px;
+}
+
+.home__card {
+  max-width: 400px;
+  min-width: 345px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 30px 0;
+}
+
+.home__cardImage {
+  height: 250px;
+  width: 80%;
+  padding: 20px;
+  margin-left: 15px;
+}
+
+.home__card h2 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.card__button {
+  border: 1px solid #e9e8e8 !important;
+  padding: 12px !important;
+  font-weight: 500 !important;
+  text-transform: capitalize !important;
+  font-size: 0.875rem !important;
+  width: 150px;
+}
+
+.home__card:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+  background-color: none !important;
+}
+.home__card *:hover {
+  background-color: "none";
+}
+
+.home__card:hover .card__button {
+  background-color: var(--brand-hue) !important;
+  color: #fff;
+}
+
+.home__solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 0 140px 0;
+  background-color: #fff;
+}
+.home__solutionText h2 {
+  font-size: 2rem;
+}
+
+.home__solutionText * {
+  margin-bottom: 20px;
+}
+
+.home_solutionActions {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 25px;
+}
+.home_solutionActions span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_solutionActions span * {
+  margin-bottom: 5px;
+}
+
+.home_solutionActions h4 {
+  font-weight: 800;
+  font-size: large;
+}
+
+.home_solutionActions p {
+  font-weight: 500;
+  font-size: medium;
+}
+
+@media (max-width: 1100px) {
+  .home__listingsCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home__card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  .home__listingsCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home__card {
+    margin-bottom: 20px;
+  }
+  .home__solutionText p {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .home__search {
+    width: 80%;
+  }
+  .home_solutionActions {
+    width: 80%;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 460px) {
+  .home__listingsCards {
+    margin-top: inherit;
+    margin-bottom: inherit;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home__solution {
+    padding: 60px 10px 90px 10px;
+  }
+  .home__solution p {
+    font-size: 0.875rem;
+  }
+
+  .home__solutionText h2 {
+    font-size: 1.8rem;
+  }
+  .home__search {
+    width: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+  .home_solutionActions {
+    flex-direction: column;
+  }
+  .home_solutionActions span p {
+    display: block;
+  }
+  .home_solutionActions span {
+    margin-top: 10px;
+  }
+  .home__text h1 {
+    font-size: 3rem;
+  }
+  .home__listingText h2 {
+    font-size: 1.5rem;
+  }
+
+  .home__card {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .home__search {
+    width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .home__search {
+    width: 100%;
+    margin-right: auto;
+    height: 50px;
+  }
+  .home__searchInput {
+    padding-left: 5px;
+    font-size: 1.2rem;
+  }
+  .home__card {
+    min-width: 280px;
+    padding: 0;
+  }
+}

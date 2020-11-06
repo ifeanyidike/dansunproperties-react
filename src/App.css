@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --darker-hue: #213e3b;
+  --semidark-hue: #41aea9;
+  --light-hue: #ffbb91;
+  --lighter-hue: #faf3dd;
+  --brand-hue: #4169e1;
+}
+
+body {
+  background: #f9f9fb;
+}
+
+.fa-facebook {
+  color: #3b5998 !important;
+}
+
+.fa-twitter,
+.fa-twitter-square {
+  color: #55acee !important;
+}
+
+.button__color {
+  background-color: blue;
+}
