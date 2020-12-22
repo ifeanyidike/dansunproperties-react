@@ -1,17 +1,16 @@
 import React from "react"
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { useHistory, useRouteMatch, useLocation  } from "react-router-dom"
+import { useHistory, useLocation  } from "react-router-dom"
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Modal, Backdrop, Fade } from '@material-ui/core';
 import styles from "../styles/properties.module.css"
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import CurrencyFormat from 'react-currency-format';
 import logo from "../images/logo.png"
 import CircularProgress from "../components/ProgressCircle"
-import PayStackPayment from "../components/PayStackPayment"
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import queryString from 'query-string'
+import OrderInfoModal from "./OrderInfoModal";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -22,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal({ open, handleClose }) {
     
+    const [openOrder, setOpenOrder] = useState(false);
+    const history = useHistory()
     const location = useLocation()
     // const id = location.search.split("=")[1]
     const params = queryString.parse(location.search)
@@ -107,28 +108,45 @@ export default function TransitionsModal({ open, handleClose }) {
                                         }
 
                                         <p>
-                                            {property && `${property.features.bed} bds | ${" "}`}
-                                            {property && `${property.features.bath} ba | ${" "}`}
-                                            {property && `${property.features.area} sqft`}
+                                            {   
+                                                property &&
+                                                property.features.bed &&
+                                             `${property.features.bed} bds `
+                                             }
+                                            {
+                                                property && 
+                                                property.features.bath &&
+                                                ` | ${property.features.bath} ba`
+                                            }
+                                            {
+                                                property && 
+                                                property.features.area &&
+                                                `| ${property.features.area} sqft`}
                                         </p>
                                     </div>
                                         <p>{property && property.location}</p>
                                         <span>
                                         <p>
-                                            {property && property.categories.map(category => `${category.name} ${" "}`)}
+                                            {property && property.categories.map(
+                                                category => <span className={styles.tag}>
+                                                {`${category.name}`}</span>)}
                                         </p>
                                         </span>
                                     <div className={styles.modalright__cta}>
                                         {property.status !== 'sold' &&
-                                        <PayStackPayment                                              
-                                              amount={property && property.price}
-                                              propertyId={property && property._id}
-                                               />
+                                        <button 
+                                            onClick={() => setOpenOrder(true)}                           
+                                        >
+                                            Place an Order
+                                        </button>
                                         }
                                             
-                                        <Button variant="outlined" color="secondary">
-                                            Inspect
-                                        </Button>
+                                        <button 
+                                            onClick={()=>history.push(`/inspect/${id}`)}                                                                                       
+                                        >
+                                            <i className="fas fa-search-location"></i>
+                                            <span>Inspect</span> 
+                                        </button>
                                     </div>
                                     <iframe
                                         className={styles.iframe}
@@ -151,6 +169,10 @@ export default function TransitionsModal({ open, handleClose }) {
                     }
         </Fade>
     </Modal>
+    
+    <OrderInfoModal 
+        openOrder = {openOrder}
+        setOpenOrder = {setOpenOrder} />
 </div>
 );
 }

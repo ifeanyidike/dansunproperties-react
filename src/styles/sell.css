@@ -1,38 +1,80 @@
+.topimage,
+.topsell {
+  background-image: url(../images/image-sell.jpg);
+  height: 40vh;
+  background-position: center;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.2);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 200;
+}
+
+.sell__header {
+  color: white !important;
+  font-size: 3rem;
+}
+
 .sell_with {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.6rem;
   padding: 40px 0 20px 0;
 }
+
 hr {
-  width: 160px;
+  width: 250px;
   background-color: rgb(250, 218, 35);
-  height: 3px;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 2px;
+  margin: 50px auto 50px auto;
+  outline: 0;
+  border: 0;
 }
 
 .sellsFirstD {
-  margin-left: 25px;
+  margin: 80px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  height: 70vh;
-  margin-right: 25px;
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  height: 400px;
   display: flex;
   background-color: white;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.message {
+  margin-bottom: 20px;
+  color: red;
+  font-weight: 600;
+}
+
+.alternative {
+  margin-left: auto;
+  padding-right: 60px;
+  padding-top: 5px;
+  color: orange;
+  cursor: pointer;
 }
 .sells__left {
   display: flex;
+  flex: 0.5;
+  width: 50%;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   align-items: space-between;
+}
+
+.sells__left h2 {
+  margin-bottom: 10px;
+}
+
+.sells__right {
+  flex: 0.5;
+  width: 50%;
 }
 
 .sell_discover {
@@ -46,7 +88,7 @@ hr {
   display: flex;
 
   background-color: #ffffff;
-  width: 370px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -59,26 +101,38 @@ hr {
   box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
 }
 
+.valueSearch {
+  width: 80%;
+  height: 55px;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.sell_button {
+  height: 100%;
+  width: fit-content;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+  background-color: rgb(250, 218, 35);
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+}
+
 .sell_search {
   border: none;
   width: 72%;
   font-size: 1.2rem;
   margin-left: 5px;
 }
-.sell_button {
-  height: 40px;
-  width: 100px;
-  background-color: turquoise;
-  border-radius: 5px;
-  border: none;
-}
+
 .sellsAgent {
   display: flex;
   justify-content: space-between;
   height: 40vh;
-  margin: 40px 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 80px;
   border-radius: 5px;
 }
 
@@ -89,55 +143,82 @@ hr {
 .sell_withA {
   display: flex;
   justify-content: space-evenly;
-  width: 65%;
+  width: 60%;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
   background-color: white;
 }
-.danAgent {
-  width: 70%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 10px;
+.dansagent__img {
+  width: 50%;
 }
+
+.danAgent {
+  padding: 50px 20px;
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.dansagent__button {
+  height: 40px;
+  width: 50%;
+  margin: 0 auto;
+}
+.dans {
+  width: 100%;
+}
+
 .sell_yours {
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 3px 1px rgba(50, 50, 50, 0.75);
   width: 30%;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
   background-color: white;
   padding: 0 10px;
 }
+
+.sell_yours h2,
+.sell_yours p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .sell_value,
 .sell_acquaint {
   display: flex;
   justify-content: space-evenly;
-  width: 65%;
-  margin-left: 200px;
+  width: 88%;
+  margin: 80px auto;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
-  box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
   font-size: 1.2rem;
-  margin-top: 40px;
   background-color: white;
 }
 
-.valueSearch {
-  width: 300px;
-  height: 55px;
-  border: none;
-  font-size: 1.2rem;
+.sell_acquaint {
+  margin-bottom: 50px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
 }
+
+.dans__thumb {
+  width: 150px;
+  height: 150px;
+}
+
+.sell_timing div i {
+  color: #bb1e1e;
+}
+
 .sell_get {
   display: flex;
   justify-content: space-evenly;
@@ -146,298 +227,104 @@ hr {
   padding: 20px 10px;
 }
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
   .sellsFirstD {
     grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
     margin-bottom: 300px;
   }
-}
+} */
 
-@media (max-width: 790px) {
+@media (max-width: 768px) {
+  .topimage,
+  .topsell {
+    height: fit-content;
+  }
+
   .sellsFirstD,
   .sellsAgent {
-    grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
-    margin-bottom: 200px;
-    font-size: 1rem;
+    margin: 20px;
   }
-  .sell_withA {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 20px;
-    width: 700px;
-    margin-top: 100px;
-    font-size: 1rem;
-  }
-  .sell_yours {
-    grid-template-columns: repeat(1, 1fr);
 
-    width: 670px;
-    margin-top: 0;
-  }
-  hr {
-    margin: 0 280px;
-  }
-  .sell_value,
-  .sell_acquaint {
-    grid-template-columns: repeat(1, 1fr);
-    width: 700px;
-    font-size: 0.9rem;
-    margin-top: 100px;
-    text-align: center;
-    margin-left: 10px;
-  }
-  .sell_explore {
-    display: flex;
+  .sellsAgent {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .sells {
-    font-size: smaller;
-  }
-  .sell_form {
-    width: 360px;
-    height: 35px;
-    border: none;
-    font-size: 0.7rem;
+  .sell_withA,
+  .sell_yours {
+    width: 100%;
   }
 
-  .valueForm,
-  .valueSearch {
-    width: 160px;
-    height: 35px;
-    border: none;
-    font-size: 0.7rem;
+  .sell_yours {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 40px 0;
   }
-  .valueSearch_Icon {
-    font-size: 1.2rem !important;
-  }
-  .sell_with,
-  .sell_with {
-    font-size: 0.9rem;
+  .dansagent__button {
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 425px) {
   .sellsFirstD,
   .sellsAgent {
-    grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
-    margin-bottom: 200px;
-    font-size: 1rem;
+    flex-direction: column-reverse;
+    height: fit-content;
+    width: fit-content;
+    padding-bottom: 10px;
   }
-  .sell_withA {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 20px;
-    width: 500px;
-    margin-top: 100px;
-    font-size: 1rem;
+  .sells__left {
+    flex: 1;
+    width: 100%;
   }
-  .sell_yours {
-    grid-template-columns: repeat(1, 1fr);
 
-    width: 470px;
-    margin-top: 0;
-  }
-  hr {
-    margin: 0 280px;
-  }
-  .sell_value,
-  .sell_acquaint {
-    grid-template-columns: repeat(1, 1fr);
-    width: 500px;
-    font-size: 0.9rem;
-    margin-top: 100px;
-    text-align: center;
-    margin-left: 10px;
-  }
-  .sell_explore {
-    display: flex;
+  .sellsAgent {
     flex-direction: column;
+  }
+
+  .sell_withA {
+    flex-direction: column;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .dansagent__img,
+  .danAgent {
+    width: 100%;
+  }
+
+  .sells__right {
+    width: 100%;
+  }
+
+  .sellsAgent {
     justify-content: center;
     align-items: center;
   }
-  .sells {
-    font-size: smaller;
+
+  .sell_yours {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 40px 0;
+    text-align: center;
   }
-  .sell_form {
-    width: 360px;
-    height: 35px;
-    border: none;
-    font-size: 0.7rem;
+  .dansagent__button {
+    margin-top: 10px;
   }
 
-  .valueForm,
-  .valueSearch {
-    width: 160px;
-    height: 35px;
-    border: none;
-    font-size: 0.7rem;
+  .sell_value,
+  .sell_acquaint {
+    flex-direction: column;
   }
-  .valueSearch_Icon {
-    font-size: 1.2rem !important;
-  }
-  .sell_with {
-    font-size: 0.9rem;
+  .sell_get {
+    width: 100%;
+    padding: inherit 0;
   }
 }
 
-@media (max-width: 460px) {
-  .sellsFirstD,
-  .sellsAgent {
-    grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
-    margin-bottom: 100px;
-    font-size: 0.7rem;
-  }
-  .sell_withA {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 20px;
-    width: 400px;
-    margin-top: 70px;
-    font-size: 0.7rem;
-  }
-  .sell_yours {
-    grid-template-columns: repeat(1, 1fr);
-
-    width: 370px;
-    margin-top: 0;
-  }
-  hr {
-    margin: 0 180px;
-  }
-  .sell_value,
-  .sell_acquaint {
-    grid-template-columns: repeat(1, 1fr);
-    width: 400px;
-    font-size: 0.7rem;
-    margin-top: 70px;
-    text-align: center;
-    margin-left: 5px;
-  }
-  .sell_explore {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .sells {
-    font-size: smaller;
-  }
-  .valueForm,
-  .valueSearch {
-    font-size: 0.6rem;
-    width: 100px;
-  }
-  .sell_with,
-  .sell_with {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .sellsFirstD,
-  .sellsAgent {
-    grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
-    margin-bottom: 100px;
-    font-size: 0.5rem;
-  }
-  .sell_withA {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 10px;
-    width: 300px;
-    margin-top: 30px;
-    font-size: 0.5rem;
-  }
-  .sell_yours {
-    grid-template-columns: repeat(1, 1fr);
-
-    width: 270px;
-    margin-top: 0;
-  }
-  hr {
-    margin: 0 150px;
-  }
-  .sell_value,
-  .sell_acquaint {
-    grid-template-columns: repeat(1, 1fr);
-    width: 300px;
-    font-size: 0.6rem;
-    margin-top: 50px;
-    text-align: center;
-    margin-left: 0;
-  }
-  .sell_explore {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .sells {
-    font-size: smaller;
-  }
-  .valueForm,
-  .valueSearch {
-    font-size: 0.6rem;
-    width: 80px;
-  }
-  .sell_with,
-  .sell_with {
-    font-size: 0.6rem;
-  }
+@media (max-width: 375px) {
 }
 
 @media (max-width: 320px) {
-  .sellsFirstD,
-  .sellsAgent {
-    grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
-    margin-bottom: 70px;
-    font-size: 0.4rem;
-  }
-  .sell_withA {
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 5px;
-    width: 280px;
-    margin-top: 10px;
-    font-size: 0.3rem;
-  }
-  .sell_yours {
-    grid-template-columns: repeat(1, 1fr);
-
-    width: 270px;
-    margin-top: 0;
-  }
-  hr {
-    margin: 0 150px;
-  }
-  .sell_value,
-  .sell_acquaint {
-    grid-template-columns: repeat(1, 1fr);
-    width: 300px;
-    font-size: 0.6rem;
-    margin-top: 50px;
-    text-align: center;
-    margin-left: 0;
-  }
-  .sell_explore {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .sells {
-    font-size: smaller;
-  }
-  .valueForm,
-  .valueSearch {
-    font-size: 0.2rem;
-    width: 50px;
-  }
-  .sell_with,
-  .sell_with {
-    font-size: 0.4rem;
-  }
 }

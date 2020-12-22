@@ -1,0 +1,51 @@
+.topabout {
+  background-image: url(../images/image-agents.jpg);
+  padding: 50px 0;
+  height: fit-content;
+  background-position: center;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.2);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+hr {
+  width: 150px;
+  background-color: rgb(250, 218, 35);
+  height: 2px;
+  margin: 0 auto;
+  outline: 0;
+  border: 0;
+}
+
+.topabout hr {
+  margin-top: 10px;
+  width: 150px;
+}
+
+.topabout h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.content {
+  margin: 40px 60px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+.content img {
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

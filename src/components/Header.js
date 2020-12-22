@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 // import dependencies
-import logo from "../images/logo.png"
+import logo from "../images/logo2.png"
 import "../styles/Header.css"
 import {Link, useLocation} from "react-router-dom"
 
@@ -78,26 +78,10 @@ const Nav = () => {
                                 
                                 </span>
                             </div>                            
-                        </div>
-                        
+                        </div>                        
                     </Link>
-                </li>
-                <li>
-                    <Link to="/inspect" onClick={handleToggleNav}>
-                        <div className="menu__visible">
-                            <div className="menu__right">
-                                <div className="iconMobile__left">
-                                    <i className="fas fa-award "></i>
-                                </div>
-                                <span className="dropdown__text"
-                                className={pathname === '/inspect' ? 'active' : ''}>
-                                    Inspect                                
-                                </span>
-                            </div>
-                        </div>
-
-                    </Link>
-                </li>
+                </li>         
+                       
                 <li>
                     <Link to="/properties" onClick={handleToggleNav}>
                         <div className="menu__visible">

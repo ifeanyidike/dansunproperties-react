@@ -1,5 +1,8 @@
 .footer {
   color: #444343;
+  background-color: var(--semidark-hue);
+  margin-bottom: 0;
+  border: 1px solid var(--semidark-hue);
 }
 .footer__link {
   display: flex;

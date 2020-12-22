@@ -22,7 +22,7 @@ const cardItems = [
         image: inspectHome,
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, fugit!",
         btn_text: "Inspect Now",
-        btnLink: '/inspect'
+        btnLink: '/properties'
     }
 ]
 

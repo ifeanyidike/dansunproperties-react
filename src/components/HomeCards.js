@@ -33,12 +33,12 @@ export default function MediaCard({ image, title, description, btn_text, variant
                     src={image} alt="title" />
 
                 <CardContent >
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <h2>
                         {title}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    </h2>
+                    <p>
                         {description}
-                    </Typography>
+                    </p>
                 </CardContent>
             </CardActionArea>
             <CardActions>

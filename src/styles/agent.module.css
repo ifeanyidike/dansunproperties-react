@@ -1,13 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.topimage,
+.topagents {
+  background-image: url(../images/image-agents.jpg);
+  height: 40vh;
+  background-position: center;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.2);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+hr {
+  width: 150px;
+  background-color: rgb(250, 218, 35);
+  height: 2px;
+  margin: 0 auto;
+  outline: 0;
+  border: 0;
+}
+
+.topagents hr {
+  margin-top: 10px;
+  width: 150px;
+}
+
+.topagents h2 {
+  color: white;
+  font-size: 3rem;
+}
+
 .agents {
-  margin-top: 20px;
+  width: 60vw;
+  margin: 20px auto;
+  box-shadow: 0px 1px 1px 1px rgba(50, 50, 50, 0.75);
+  background-color: white;
 }
 
 .agents > h2 {
   font-weight: 400;
   font-size: 3rem;
-  font-family: "Exo 2", sans-serif;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -16,7 +51,7 @@
   display: flex;
   padding: 20px 40px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-top: 1px solid #ddd;
 }
 
@@ -26,7 +61,6 @@
 }
 
 .agent .agent__details {
-  font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -36,6 +70,9 @@
 }
 
 @media (max-width: 796px) {
+  .agents {
+    width: 80vw;
+  }
   .agent {
     flex-direction: column;
     align-items: center;

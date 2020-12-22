@@ -19,15 +19,12 @@ const Footer = () => {
                 <Link to="/properties">
                     Properties
                 </Link>
-                <Link to="/privacy">
+                <Link to="/privacy-policy">
                     Privacy
                 </Link>
                 <Link to="/terms">
                     Terms
-                </Link>
-                <Link to="/inspect">
-                    Inspect
-                </Link>
+                </Link>                
                 <Link to="/sell">
                     Sell
                 </Link>

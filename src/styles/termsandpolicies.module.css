@@ -1,0 +1,41 @@
+.termspolicies {
+  background-image: url(../images/image-agents.jpg);
+  height: 40vh;
+  background-position: center;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.2);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+hr {
+  width: 150px;
+  background-color: rgb(250, 218, 35);
+  height: 2px;
+  margin: 0 auto;
+  outline: 0;
+  border: 0;
+}
+
+.termspolicies hr {
+  margin-top: 10px;
+  width: 150px;
+}
+
+.termspolicies h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+.content {
+  padding: 60px 100px;
+}
+
+.content .h2 {
+  margin-top: 10px;
+}

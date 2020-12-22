@@ -5,13 +5,20 @@ import Agent from "../components/Agent"
 
 const FindAnAgent = () => {
     return (
-        <div className={styles.agents}>
-            <h2>Dansun Agents</h2>
-            <Agent />
-            <Agent />
-            <Agent />
-            <Agent />
-            <Agent />
+        <div>
+            <div className={styles.topagents}>    
+                <div>
+                    <h2>Dansun Agents</h2>
+                    <hr />
+                </div>
+            </div>            
+            <div className={styles.agents}>
+                <Agent />
+                <Agent />
+                <Agent />
+                <Agent />
+                <Agent />
+            </div>
         </div>
 
     )

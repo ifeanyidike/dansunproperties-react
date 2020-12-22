@@ -4,6 +4,7 @@ import Card from "../components/HomeCards"
 import carditems from "../components/cardItems"
 import SearchIcon from '@material-ui/icons/Search';
 import Meta from "../components/Meta"
+import Testimonial from "../components/TestimonialSlide"
 
 
 const Home = ({history}) => {
@@ -34,7 +35,8 @@ const Home = ({history}) => {
 
       <div className={styles.home__listings}>
         <div className={styles.home__listingText}>
-          <h2>A home should also mean peace of mind</h2>
+          <h2>A home should also mean peace of mind</h2>       
+          <hr className={styles.line} />   
         </div>
 
 
@@ -55,11 +57,28 @@ const Home = ({history}) => {
           }
         </div>
       </div>
+      
+      <div className={styles.home__testimonial}>
+                
+                <div className={styles.testimonial__content}>
+                    <h2>Client testimonials</h2>
+                    <hr className={styles.line}  />   
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa assumenda provident est consequatur?</p>                    
+                    
+                    <Testimonial
+                        perPage={
+                            window.innerWidth >= parseInt('1440px') ? 3 : 
+                            window.innerWidth >= parseInt('768px') ? 2 : 1} 
+                        
+                    />
+        </div>
+      </div>
 
       <div className={styles.home__solution}>
         <div className={styles.home__solutionText}>
           <h2> National Leader in Real Estate</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto similique corporis itaque, illo possimus suscipit!</p>
+          <hr className={styles.line}  />   
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto similique corporis itaque, illo possimus suscipit!</p>          
         </div>
         <div className={styles.home_solutionActions}>
           <span>

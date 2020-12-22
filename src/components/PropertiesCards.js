@@ -41,9 +41,9 @@ export default function PropertiesCard({ click, id, mainImage, location, status,
                             renderText={value => <h2>{value}</h2>}
                         />
                         <p>
-                            {features.bed && `${features.bed} bds | ${" "}`}
-                            {features.bath && `${features.bath} ba | ${" "}`}
-                            {features.area && `${features.area} sqft`}
+                            {features.bed && `${features.bed} bds`}
+                            {features.bath && ` | ${features.bath} ba`}
+                            {features.area && ` | ${features.area} sqft`}
                         </p>
                     </div>
                     <p>{location}</p>

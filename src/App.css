@@ -6,10 +6,10 @@
 
 :root {
   --darker-hue: #213e3b;
-  --semidark-hue: #41aea9;
+  --semidark-hue: rgb(250, 218, 35);
   --light-hue: #ffbb91;
   --lighter-hue: #faf3dd;
-  --brand-hue: #4169e1;
+  --brand-hue: #bb4c4c;
 }
 
 body {

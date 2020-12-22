@@ -24,6 +24,8 @@ export default function ContactForm() {
     const [contactState, setContactState] = useState(false)
     const [loading, setLoading] = useState(false)
     
+    const API_URL = "https://dansun-server.herokuapp.com"  
+    
     const handleSubmit = async(e) =>{
         e.preventDefault()
         setLoading(true)
@@ -43,7 +45,7 @@ export default function ContactForm() {
                 }
             }
             
-            const res = await axios.post('/contacts', contactBody, config)
+            const res = await axios.post(`${API_URL}/contacts`, contactBody, config)
             
             if (res.status === 200){
                 setDisplayMessage('Message Successfully Delivered')
@@ -66,9 +68,18 @@ export default function ContactForm() {
     }
     
     
-return (
+return (    
+ 
+ <div>
+     <div className={styles.topimage}>    
+        <div>
+            <h2>Fill the contact form to get started</h2>    
+            <hr/>
+        </div>
+    </div>
     
- <div className={styles.contact}>
+    
+    <div className={styles.contact}>    
         
     { loading ? <CircularProgress /> :
         (
@@ -193,5 +204,7 @@ return (
     }
                 
  </div>        
+ </div>
+ 
 );
 }

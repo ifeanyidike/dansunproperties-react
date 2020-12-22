@@ -1,14 +1,25 @@
 a {
   text-decoration: none;
 }
+h2 {
+  font-size: 1.8rem;
+  color: #bb4c4c;
+}
+
+hr.line {
+  width: 250px;
+  background-color: rgb(250, 218, 35);
+  height: 2px;
+  margin: 0 auto;
+  outline: 0;
+  border: 0;
+}
 
 .home__mainImage {
   height: 80vh;
-  background-image: url("../images/pexels-alex-1732414.jpg");
+  background-image: url("../images/image-home.jpg");
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.404);
-  background-blend-mode: darken;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,18 +35,23 @@ a {
 .home__text h1 {
   font-weight: 600;
   font-size: 4rem;
+  color: #bb4c4c;
 }
 
 .home__text p {
   font-weight: 300;
   font-size: 1.5rem;
+
+  font-weight: 400;
 }
 
 .home__search {
   display: flex;
-  background-color: white;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
   width: 50%;
-  height: 60px;
+  height: 50px;
   border-radius: 5px;
   align-items: center;
 }
@@ -48,6 +64,11 @@ a {
   border-radius: 5px;
   font-size: 1.4rem;
   padding-left: 15px;
+  background-color: transparent;
+  color: white !important;
+}
+.home__searchInput::placeholder {
+  color: white;
 }
 
 .home__search > .MuiSvgIcon-root {
@@ -60,27 +81,58 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .home__listingText {
-  max-width: 480px;
   align-self: center;
 }
 
 .home__listingText > h2 {
-  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home__testimonial {
+  padding: 40px 80px;
+  background: #fefefe;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 249, 251, 1) 12%,
+    rgba(250, 250, 252, 1) 27%,
+    rgba(251, 251, 253, 1) 41%,
+    rgba(252, 252, 254, 1) 57%,
+    rgba(253, 253, 254, 1) 70%,
+    rgba(254, 254, 254, 1) 83%
+  );
+  font-family: "Jost", sans-serif;
+}
+
+.testimonial__content {
+  padding: 20px 0;
   text-align: center;
 }
 
+.testimonial__content h2 {
+  font-family: "Aclonica", sans-serif;
+  margin-bottom: 30px;
+}
+
+.testimonial__content p {
+  font-family: "Jost", sans-serif;
+  margin: 20px 0 50px 0;
+}
+
 .home__listingsCards {
+  font-family: "Jost", sans-serif !important;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
-  margin: 70px;
+  margin: 20px 70px 70px 70px;
 }
 
 .home__card {
+  font-family: "Jost", sans-serif;
   max-width: 400px;
   min-width: 345px;
   margin: 0 10px;
@@ -105,6 +157,7 @@ a {
 }
 
 .card__button {
+  font-family: "Jost", sans-serif !important;
   border: 1px solid #e9e8e8 !important;
   padding: 12px !important;
   font-weight: 500 !important;
@@ -133,14 +186,23 @@ a {
   align-items: center;
   text-align: center;
   padding: 100px 0 140px 0;
-  background-color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 254, 1) 12%,
+    rgba(253, 253, 254, 1) 27%,
+    rgba(252, 252, 254, 1) 41%,
+    rgba(251, 251, 253, 1) 57%,
+    rgba(250, 250, 252, 1) 70%,
+    rgba(249, 249, 251, 1) 83%
+  );
 }
 .home__solutionText h2 {
   font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-.home__solutionText * {
-  margin-bottom: 20px;
+.home__solutionText p {
+  margin-top: 30px !important;
 }
 
 .home_solutionActions {
@@ -180,14 +242,15 @@ a {
 }
 
 @media (max-width: 790px) {
+  h2 {
+    font-size: 1.4rem !important;
+  }
   .home__listingsCards {
     grid-template-columns: repeat(1, 1fr);
   }
-  .home__card {
-    margin-bottom: 20px;
-  }
+
   .home__solutionText p {
-    margin: 0 20px;
+    margin: auto 20px;
   }
 }
 
@@ -224,6 +287,20 @@ a {
   }
 }
 
+@media (max-width: 375px) {
+  .home__search {
+    width: auto;
+    height: 48px;
+  }
+  .home__searchInput {
+    flex: 0.9;
+  }
+
+  .home__search > .MuiSvgIcon-root {
+    flex: 0.1;
+  }
+}
+
 @media (max-width: 360px) {
   .home_solutionActions {
     flex-direction: column;
@@ -243,22 +320,23 @@ a {
 
   .home__card {
     margin: 0;
-    margin-bottom: 10px;
-  }
-  .home__search {
-    width: auto;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 320px) {
   .home__search {
-    width: 100%;
-    margin-right: auto;
     height: 50px;
+    border-radius: 30px;
   }
   .home__searchInput {
-    padding-left: 5px;
+    padding-left: 10px;
     font-size: 1.2rem;
+    border-radius: 30px;
+  }
+
+  .home__search > svg {
+    padding-right: 10px;
   }
   .home__card {
     min-width: 280px;

@@ -12,6 +12,7 @@ import BedBath from "../components/BedBath"
 import CircularProgress from "../components/ProgressCircle"
 import Pagination from '@material-ui/lab/Pagination';
 import queryString from 'query-string'
+import PaginationControl from "../components/Pagination"
 
 const Properties = ({history, location}) => {
     const [input, setInput] = useState("")
@@ -59,7 +60,7 @@ const Properties = ({history, location}) => {
         }
         getProperties()
         
-    }, [q, start, status, minVal, maxVal])
+    }, [q, start, status, minVal, maxVal, statusState])
     
     console.log(properties)
             
@@ -67,8 +68,13 @@ const Properties = ({history, location}) => {
         console.log("value", value)
         history.push(`properties?page=${value}`)
         setPage(value);        
-      };
+    };
     
+    const changeCurrentPage = (numPage) => {
+        console.log("value", numPage)
+        history.push(`properties?page=${numPage}`)
+        setPage(numPage);        
+    };
     
     const [open, setOpen] = useState(false);
 
@@ -180,11 +186,22 @@ const Properties = ({history, location}) => {
                 </div>
 
             </div>
-            <div className={styles.properties__listings}>            
+            <div className={styles.properties__content}>
+                <div className={styles.listingsimage}>
+                    <div>
+                        <h2>Our Properties</h2>
+                        <hr />
+                    </div>
+                </div>
+                
+                <div className={styles.properties__listings}>                     
             
                 {                    
                     (loading || properties === undefined) && (
-                        <CircularProgress />
+                       <>
+                            <CircularProgress />
+                            
+                       </>
                     )
                 }
                 
@@ -213,12 +230,16 @@ const Properties = ({history, location}) => {
                 }
 
             </div>
+                
+            </div>
+            
             <Modal
                 open={open}
                 handleClose={handleClose}
             />
             
             <div>
+            
             
             { (perPage < numOfProperties)  && (
                 
@@ -230,7 +251,8 @@ const Properties = ({history, location}) => {
                     onChange={handleChange}
                  />                 
             ) }                                                
-        </div>            
+        </div>     
+              
         </>
 
 
