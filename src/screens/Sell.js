@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios"
-import SearchIcon from '@material-ui/icons/Search';
+import Meta from "../components/Meta"
 import "../styles/sell.css"
 import dansImage from "../images/dansimage.PNG"
 import dansImage1 from "../images/dansimage1.PNG"
@@ -60,6 +60,7 @@ const Sell =()=>{
     return(
         
     <div className="sells">        
+        <Meta title="Sell Properties at Dansun Properties" />
         <div className="topsell">    
             <div className="sell_with">
                 <h2 className="sell__header">Sell with confidence</h2>

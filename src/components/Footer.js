@@ -31,11 +31,12 @@ const Footer = () => {
             </div>
 
             <p className={styles.footer__text}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint temporibus perspiciatis nam voluptatum ratione? Quam sed consectetur voluptate architecto, qui magnam dolor eos nesciunt, maxime ipsum quos eligendi, corrupti fuga.
+                Dansun Properties Limited specializes in all kinds of real estate properties such as estates, flats, lands, and houses. Our properties are located in Abuja, Port Harcourt and Lagos. 
+                <Link to="/contact"> Contact Us</Link> to Buy.
             </p>
 
             <div className={styles.footer__bottomText}>
-                <img src={logo} />
+                <img src={logo} alt="Dansun Properties Logo" />
                 <a href="#"> <i className="fab fa-facebook fa-2x"></i> </a>
                 <a href="#"> <i className="fab fa-twitter-square fa-2x"></i></a> 
                 <p>© 2006-2020 Dansun</p>

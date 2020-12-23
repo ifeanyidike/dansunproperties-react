@@ -39,3 +39,13 @@ hr {
 .content .h2 {
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .termspolicies {
+    height: fit-content;
+    padding: 50px 0;
+  }
+  .content {
+    padding: 60px 40px;
+  }
+}

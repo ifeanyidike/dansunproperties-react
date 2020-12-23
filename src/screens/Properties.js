@@ -7,12 +7,12 @@ import Card from "../components/PropertiesCards"
 import Modal from "../components/Modal"
 import RadioButton from "../components/RadioButton"
 import PricesButton from "../components/PricesButton"
-import PropertyTypeButton from "../components/PropertyTypeButton"
-import BedBath from "../components/BedBath"
+// import PropertyTypeButton from "../components/PropertyTypeButton"
+// import BedBath from "../components/BedBath"
 import CircularProgress from "../components/ProgressCircle"
-import Pagination from '@material-ui/lab/Pagination';
 import queryString from 'query-string'
-import PaginationControl from "../components/Pagination"
+import Paginate from "../components/Paginate"
+import Meta from '../components/Meta';
 
 const Properties = ({history, location}) => {
     const [input, setInput] = useState("")
@@ -28,6 +28,7 @@ const Properties = ({history, location}) => {
   
     const perPage = 6
     const lastPage = Math.ceil(numOfProperties / perPage)
+    console.log(lastPage)
     const start = page === 1 ? 0 
                     : (page < lastPage) ? (page - 1) * perPage
                     : (lastPage - 1) * perPage
@@ -60,21 +61,13 @@ const Properties = ({history, location}) => {
         }
         getProperties()
         
-    }, [q, start, status, minVal, maxVal, statusState])
-    
-    console.log(properties)
+    }, [q, start, status, minVal, maxVal, statusState])    
             
-    const handleChange = (e, value) => {
-        console.log("value", value)
-        history.push(`properties?page=${value}`)
-        setPage(value);        
-    };
-    
-    const changeCurrentPage = (numPage) => {
-        console.log("value", numPage)
-        history.push(`properties?page=${numPage}`)
-        setPage(numPage);        
-    };
+    // const handleChange = (e, value) => {
+    //     console.log("value", value)
+    //     history.push(`properties?page=${value}`)
+    //     setPage(value);        
+    // };        
     
     const [open, setOpen] = useState(false);
 
@@ -128,6 +121,7 @@ const Properties = ({history, location}) => {
     
     return (
         <>
+            <Meta title="Dansun Properties High-Valued Properties" />
             <div className={styles.properties}>
                 <form className={styles.properties__search} onSubmit={handleSubmit}>
                     <input
@@ -161,8 +155,7 @@ const Properties = ({history, location}) => {
                             setMinVal={setMinVal}
                             maxVal={maxVal}
                             setMaxVal={setMaxVal}                                 
-                        />
-                        
+                        />                        
                     </Popper>
                     {/* <Popper
                         title="Beds and Baths"
@@ -173,7 +166,7 @@ const Properties = ({history, location}) => {
                         <BedBath setBed={setBed} setBath={setBath} />
                         
                     </Popper> */}
-                    <Popper
+                    {/* <Popper
                         title="Property type"
                         popperClick={handlePropertyPopper}
                         popper={propertyPopper}
@@ -182,7 +175,7 @@ const Properties = ({history, location}) => {
                         className="popper__last"
                     >
                         <PropertyTypeButton />
-                    </Popper>
+                    </Popper> */}
                 </div>
 
             </div>
@@ -238,20 +231,11 @@ const Properties = ({history, location}) => {
                 handleClose={handleClose}
             />
             
-            <div>
-            
-            
-            { (perPage < numOfProperties)  && (
-                
-                <Pagination 
-                    className={styles.pagination}
-                    count={lastPage} 
-                    page={page} 
-                    variant="outlined"
-                    onChange={handleChange}
-                 />                 
-            ) }                                                
-        </div>     
+            <div>                        
+                { (perPage < numOfProperties)  && (                
+                 <Paginate count={lastPage} setPage={setPage} />                        
+                ) }                                                            
+            </div>     
               
         </>
 

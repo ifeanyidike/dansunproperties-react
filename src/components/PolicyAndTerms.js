@@ -21,7 +21,6 @@ const PolicyAndTerms = ({type, id, caption}) => {
         
     }, [type, id])
     
-    console.log(details)
     return (
         <>
             <div className={styles.termspolicies}>    

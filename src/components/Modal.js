@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { useHistory, useLocation  } from "react-router-dom"
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Modal, Backdrop, Fade } from '@material-ui/core';
+import { Modal, Backdrop, Fade } from '@material-ui/core';
 import styles from "../styles/properties.module.css"
 import CurrencyFormat from 'react-currency-format';
 import logo from "../images/logo.png"
-import CircularProgress from "../components/ProgressCircle"
+import CircularProgress from "./ProgressCircle"
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import queryString from 'query-string'
 import OrderInfoModal from "./OrderInfoModal";

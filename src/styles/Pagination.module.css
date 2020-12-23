@@ -9,3 +9,7 @@
 .paginationButton:hover {
   background-color: #ddd;
 }
+
+.pagination {
+  display: flex;
+}

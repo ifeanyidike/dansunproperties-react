@@ -14,6 +14,7 @@ import MessageIcon from '@material-ui/icons/Message';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import CircularProgress from "../components/ProgressCircle"
 
+
 export default function ContactForm() {
     const [fName, setFName] = useState("")
     const [lName, setLName] = useState("")
@@ -71,6 +72,7 @@ export default function ContactForm() {
 return (    
  
  <div>
+    <Meta title="Contact Us" />
      <div className={styles.topimage}>    
         <div>
             <h2>Fill the contact form to get started</h2>    

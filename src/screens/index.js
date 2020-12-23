@@ -16,6 +16,7 @@ const Home = ({history}) => {
 
   return (
     <div className={styles.home}>
+      <Meta title="Dansun Properites Limited - The best real estate company in Nigeria" />
       <div className={styles.home__mainImage}>
         <div className={styles.home__text}>
           <h1>Think about Home</h1>
@@ -47,7 +48,7 @@ const Home = ({history}) => {
               <Card
                 key={index}
                 title={title}
-                description={description}
+                
                 image={image}
                 btn_text={btn_text}
                 btnLink ={btnLink}
@@ -63,7 +64,7 @@ const Home = ({history}) => {
                 <div className={styles.testimonial__content}>
                     <h2>Client testimonials</h2>
                     <hr className={styles.line}  />   
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa assumenda provident est consequatur?</p>                    
+                    <p>Our clients are proud of us. Here what they say about Dansun Properties Limited.</p>                    
                     
                     <Testimonial
                         perPage={
@@ -78,7 +79,7 @@ const Home = ({history}) => {
         <div className={styles.home__solutionText}>
           <h2> National Leader in Real Estate</h2>
           <hr className={styles.line}  />   
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto similique corporis itaque, illo possimus suscipit!</p>          
+          <p>With over 5 years of experience in the real estate industry, we know what it means to deliver quality</p>          
         </div>
         <div className={styles.home_solutionActions}>
           <span>

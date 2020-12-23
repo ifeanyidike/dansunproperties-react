@@ -16,7 +16,6 @@ import CircularProgress from "../components/ProgressCircle"
 import RoomIcon from '@material-ui/icons/Room';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import { useLocation } from "react-router-dom"
-import CurrencyFormat from 'react-currency-format';
 
 export default function Inspect() {    
   
@@ -87,6 +86,7 @@ export default function Inspect() {
 return (    
  
  <div>
+    <Meta title="Inspect Dansun Properties" />
      <div className={styles.topinspect}>    
         
         <div>

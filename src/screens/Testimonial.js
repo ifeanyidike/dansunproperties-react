@@ -5,6 +5,7 @@ import {useLocation} from "react-router-dom"
 import queryString from 'query-string'
 import axios from 'axios'
 import CircularProgress from "../components/ProgressCircle"
+import Meta from "../components/Meta"
 
 const Testimonial = () => {
     const location = useLocation()
@@ -36,6 +37,7 @@ const Testimonial = () => {
     
     return (
         <>
+            <Meta title="Dansun Properties Testimonials" />
             {
                 loading ? <CircularProgress /> :
                 error ? "Error.."

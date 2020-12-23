@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from "../styles/about.module.css"
+import Meta from "../components/Meta"
 
 const about = () => {
     return (
         <div>
+            <Meta title="About Dansun Properties" />
             <div className={styles.topabout}>    
                 <div>
                     <h2>About Us</h2>
